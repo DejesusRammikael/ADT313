@@ -1,0 +1,13 @@
+
+
+.searched-movie {
+  max-height: 200px;
+}
+.search-container p:hover {
+  background-color: lightblue;
+}
+
+.poster-image {
+  width: 150px;
+  height: auto;
+}
