@@ -68,17 +68,18 @@ function Login() {
   }, [userInputDebounce]);
 
   return (
-    <div className="Login">
+    <div class="Login">
       <div className="main-container">
-        <h3>Login</h3>
         <form>
           <div className="form-container">
+            <h3>Login</h3>
             <div>
               <div className="form-group">
-                <label>E-mail:</label>
                 <input
                   type="text"
                   name="email"
+                  class="form-control my-2 py-2"
+                  placeholder="E-Mail"
                   ref={emailRef}
                   onChange={(e) => handleOnChange(e, "email")}
                 />
@@ -89,10 +90,11 @@ function Login() {
             </div>
             <div>
               <div className="form-group">
-                <label>Password:</label>
                 <input
                   type={isShowPassword ? "text" : "password"}
                   name="password"
+                  class="form-control my-2 py-2"
+                  placeholder="Password"
                   ref={passwordRef}
                   onChange={(e) => handleOnChange(e, "password")}
                 />
@@ -108,6 +110,7 @@ function Login() {
             <div className="submit-container">
               <button
                 type="button"
+                class="btn btn-primary"
                 disabled={status === "loading"}
                 onClick={() => {
                   if (status === "loading") {
@@ -134,7 +137,7 @@ function Login() {
               </button>
             </div>
             <div className="register-container">
-              <a href="/register">
+              <a href="/register" class="nav-link">
                 <small>Register</small>
               </a>
             </div>

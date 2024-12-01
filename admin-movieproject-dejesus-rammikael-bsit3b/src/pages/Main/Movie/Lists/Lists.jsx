@@ -48,6 +48,7 @@ const Lists = () => {
       <div className="create-container">
         <button
           type="button"
+          class="btn btn-info"
           onClick={() => {
             navigate("/main/movie/form");
           }}
@@ -72,13 +73,18 @@ const Lists = () => {
                 <td>
                   <button
                     type="button"
+                    class="btn btn-secondary"
                     onClick={() => {
                       navigate("/main/movie/form/" + movie.id);
                     }}
                   >
                     Edit
                   </button>
-                  <button type="button" onClick={() => handleDelete(movie.id)}>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onClick={() => handleDelete(movie.id)}
+                  >
                     Delete
                   </button>
                 </td>

@@ -190,17 +190,26 @@ const Form = () => {
       {movieId === undefined && (
         <>
           <div className="search-container">
-            Search Movie:{" "}
+            <label> Search Movie: </label>{" "}
             <input
               type="text"
+              class="form-control"
               onChange={(event) => setQuery(event.target.value)}
             />
-            <button type="button" onClick={handleSearch}>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onClick={handleSearch}
+            >
               Search
             </button>
-            <div className="searched-movie">
+            <div
+              className={`searched-movie ${
+                searchedMovieList.length === 0 ? "hidden" : ""
+              }`}
+            >
               {searchedMovieList.map((movie) => (
-                <p onClick={() => handleSelectMovie(movie)}>
+                <p key={movie.id} onClick={() => handleSelectMovie(movie)}>
                   {movie.original_title}
                 </p>
               ))}
@@ -268,8 +277,11 @@ const Form = () => {
               onChange={handleChange}
             />
           </div>
-
-          <button type="button" onClick={movieId ? handleUpdate : handleSave}>
+          <button
+            type="button"
+            className="save-button"
+            onClick={movieId ? handleUpdate : handleSave}
+          >
             Save
           </button>
         </form>

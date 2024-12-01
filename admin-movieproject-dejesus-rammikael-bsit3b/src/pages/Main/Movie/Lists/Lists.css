@@ -1,5 +1,5 @@
 .lists-container {
-  width: 100%;
+  width: 1200;
   display: flex;
   flex-direction: column;
   max-height: 80vh; 
@@ -9,8 +9,11 @@
 .create-container {
   align-self: flex-end;
   margin: 1rem 0;
+  
 }
-
+.create-container button{
+  color: white;
+}
 .table-container {
   width: 100%;
   text-align: center;
@@ -33,4 +36,8 @@
   position: sticky;
   top: 0; 
   z-index: 1;
+}
+
+.movie-lists td button{
+  margin-right: 10px;
 }

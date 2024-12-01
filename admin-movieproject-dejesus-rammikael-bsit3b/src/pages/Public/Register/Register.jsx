@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
+import "./Register.css";
 import { useDebounce } from "../../../utils/hooks/useDebounce";
 import { useNavigate } from "react-router-dom";
 
@@ -105,10 +106,11 @@ function Register() {
           <div className="form-container">
             <div>
               <div className="form-group">
-                <label>E-mail:</label>
                 <input
                   type="text"
                   name="email"
+                  class="form-control my-2 py-2"
+                  placeholder="E-mail"
                   onChange={(e) => handleOnChange(e, "email")}
                 />
               </div>
@@ -118,10 +120,11 @@ function Register() {
             </div>
             <div>
               <div className="form-group">
-                <label>Password:</label>
                 <input
                   type={isShowPassword ? "text" : "password"}
                   name="password"
+                  class="form-control my-2 py-2"
+                  placeholder="Password"
                   onChange={(e) => handleOnChange(e, "password")}
                 />
                 {debounceState && isFieldsDirty && password === "" && (
@@ -134,10 +137,11 @@ function Register() {
             </div>
             <div>
               <div className="form-group">
-                <label>Firstname:</label>
                 <input
                   type="text"
                   name="firstname"
+                  class="form-control my-2 py-2"
+                  placeholder="Firstname"
                   onChange={(e) => handleOnChange(e, "firstname")}
                 />
               </div>
@@ -147,10 +151,11 @@ function Register() {
             </div>
             <div>
               <div className="form-group">
-                <label>Middlename:</label>
                 <input
                   type="text"
                   name="middlename"
+                  class="form-control my-2 py-2"
+                  placeholder="Middlename"
                   onChange={(e) => handleOnChange(e, "middlename")}
                 />
               </div>
@@ -160,10 +165,11 @@ function Register() {
             </div>
             <div>
               <div className="form-group">
-                <label>Lastname:</label>
                 <input
                   type="text"
                   name="lastname"
+                  class="form-control my-2 py-2"
+                  placeholder="Lastname"
                   onChange={(e) => handleOnChange(e, "lastname")}
                 />
               </div>
@@ -173,10 +179,11 @@ function Register() {
             </div>
             <div>
               <div className="form-group">
-                <label>Phone Number:</label>
                 <input
                   type="text"
                   name="phonenumber"
+                  class="form-control my-2 py-2"
+                  placeholder="Phone Number"
                   onChange={(e) => handleOnChange(e, "phonenumber")}
                 />
               </div>

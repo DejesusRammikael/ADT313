@@ -2,12 +2,117 @@
 
 .searched-movie {
   max-height: 200px;
+
 }
 .search-container p:hover {
   background-color: lightblue;
+}
+.search-container{
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.search-container label{
+position: relative;
+top: 40px;
+}
+
+.search-container input{
+  width: 30%;
+  height: 35px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  top: 40px;
+  padding: 8px
+  
+  
+}
+
+.search-container button{
+  margin-top: 20px;
+position: relative;
+top: 15px;
+  height: 40px;
+
 }
 
 .poster-image {
   width: 150px;
   height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+}
+
+.hidden {
+  display: none; 
+}
+
+.searched-movie {
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 2.5%;
+  margin-left: 30px;
+  max-height: 50px;
+  overflow-y: auto;
+  width: 500px;
+}
+
+.searched-movie p {
+  
+  margin: 5px 0;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.searched-movie p:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.field input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+}
+
+
+
+.save-button {
+
+  margin-top: 20px;
+  padding: 10px 150px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;  
+  cursor: pointer;
+  position: relative;
+  right: -10px;
+}
+
+.save-button:hover {
+  background-color: #218838;
+}
+
+.save-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }

@@ -1,39 +1,58 @@
 .main-container {
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
   align-items: center;
   height: 100vh;
 }
 
+
+
 .form-container {
-  padding: 4rem 2rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
+  
+  padding: 2rem 2rem;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(10px);
+  border-radius:  0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.form-container h3 {
+  margin-bottom: 30px;
+}
+
 .form-container > div {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .form-group {
-  display: flex;
+  display: flex;  
+}
+.form-group input{
+
+width: 400px;
+height: 50px;
 }
 
-.form-group label {
-  width: 70px;
-  margin-right: 8px;
-  text-align: left;
+.show-password{
+  color: white;
+}
+.form-group input::placeholder{
+  color: brown;
+
 }
 .errors {
   color: red;
   font-size: 12px;
 }
 .submit-container {
-  margin-top: 12px;
+  margin-top: 10px;
   text-align: center;
 }
 .register-container {
@@ -41,5 +60,13 @@
 }
 .show-password {
   margin-bottom: 1rem;
+  font-size: 20px;
   cursor: pointer;
+}
+
+.submit-container button{
+  width: 200px;
+  height: 45px;
+  background: brown;
+
 }

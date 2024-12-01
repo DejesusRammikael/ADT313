@@ -3,6 +3,7 @@
   overflow: hidden;
   max-height: 100vh;
 }
+
 .Main .container {
   display: flex;
   width: 100vw;
