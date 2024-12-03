@@ -3,6 +3,7 @@ import "./Login.css";
 import { useNavigate } from "react-router-dom";
 import { useDebounce } from "../../../utils/hooks/useDebounce";
 import axios from "axios";
+import logo from "./Logo.png";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -14,7 +15,8 @@ function Login() {
   const userInputDebounce = useDebounce({ email, password }, 2000);
   const [debounceState, setDebounceState] = useState(false);
   const [status, setStatus] = useState("idle");
-
+  const [emailplaceholder, setEmailPlaceholder] = useState(" E-Mail");
+  const [passplaceholder, setPassPlaceholder] = useState(" Password");
   const navigate = useNavigate();
 
   const handleShowPassword = useCallback(() => {
@@ -68,18 +70,20 @@ function Login() {
   }, [userInputDebounce]);
 
   return (
-    <div class="Login">
+    <div className="Login">
       <div className="main-container">
         <form>
           <div className="form-container">
             <h3>Login</h3>
+            <div className="logo">
+              <img src={logo} alt="movielogo"></img>
+            </div>
             <div>
               <div className="form-group">
                 <input
                   type="text"
                   name="email"
-                  class="form-control my-2 py-2"
-                  placeholder="E-Mail"
+                  placeholder=" E-Mail"
                   ref={emailRef}
                   onChange={(e) => handleOnChange(e, "email")}
                 />
@@ -93,8 +97,9 @@ function Login() {
                 <input
                   type={isShowPassword ? "text" : "password"}
                   name="password"
-                  class="form-control my-2 py-2"
-                  placeholder="Password"
+                  placeholder=" Password"
+                  onFocus={() => setPassPlaceholder("")}
+                  onBlur={() => setPassPlaceholder(" Password")}
                   ref={passwordRef}
                   onChange={(e) => handleOnChange(e, "password")}
                 />
@@ -110,7 +115,6 @@ function Login() {
             <div className="submit-container">
               <button
                 type="button"
-                class="btn btn-primary"
                 disabled={status === "loading"}
                 onClick={() => {
                   if (status === "loading") {
@@ -137,7 +141,7 @@ function Login() {
               </button>
             </div>
             <div className="register-container">
-              <a href="/register" class="nav-link">
+              <a href="/register">
                 <small>Register</small>
               </a>
             </div>

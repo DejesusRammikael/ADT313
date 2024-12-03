@@ -2,6 +2,7 @@
   display: flex;
   overflow: hidden;
   max-height: 100vh;
+  background-color: blue;
 }
 
 .Main .container {
@@ -31,6 +32,7 @@
 .Main .container .navigation ul li:hover {
   background: #ccc;
 }
+
 .Main .container .navigation ul li a {
   text-decoration: none;
 }

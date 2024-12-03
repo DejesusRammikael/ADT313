@@ -4,13 +4,11 @@
   max-height: 200px;
 
 }
-.search-container p:hover {
-  background-color: lightblue;
-}
+
 .search-container{
   font-size: 20px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .search-container label{
@@ -20,19 +18,29 @@ top: 40px;
 
 .search-container input{
   width: 30%;
-  height: 35px;
-  margin-left: 10px;
+  height: 25px;
+  margin-left: 20px;
   margin-bottom: 20px;
   position: relative;
   top: 40px;
-  padding: 8px
+  padding: 8px;
+
+  border-radius: 10px;
+ 
+  
+  margin-top: -10px;
   
   
 }
 
 .search-container button{
-  margin-top: 20px;
-position: relative;
+  margin-top: 15px;
+  border-radius: 10px;
+  width: 100px;  
+  position: relative;
+  background-color: blue;
+  color: white;
+
 top: 15px;
   height: 40px;
 
@@ -115,4 +123,11 @@ textarea {
 .save-button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: none;
+  border-top: 1px solid #ccc; 
 }

@@ -193,14 +193,9 @@ const Form = () => {
             <label> Search Movie: </label>{" "}
             <input
               type="text"
-              class="form-control"
               onChange={(event) => setQuery(event.target.value)}
             />
-            <button
-              type="button"
-              class="btn btn-primary"
-              onClick={handleSearch}
-            >
+            <button type="button" onClick={handleSearch}>
               Search
             </button>
             <div
@@ -277,11 +272,8 @@ const Form = () => {
               onChange={handleChange}
             />
           </div>
-          <button
-            type="button"
-            className="save-button"
-            onClick={movieId ? handleUpdate : handleSave}
-          >
+          <div className="Credits">Credits to</div>
+          <button type="button" onClick={movieId ? handleUpdate : handleSave}>
             Save
           </button>
         </form>

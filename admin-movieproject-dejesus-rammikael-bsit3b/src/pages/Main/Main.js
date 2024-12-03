@@ -28,8 +28,8 @@ function Main() {
               <a href='/main/movie'>Movie</a>
             </li>
            
-            <li classname='Artist'>Artist</li>
-            <li classname='Videos'>Videos</li>
+            <li className='Artist'>Artist</li>
+            <li className='Videos'>Videos</li>
              <li className='logout'>
               <a onClick={handleLogout}>Logout</a>
             </li>

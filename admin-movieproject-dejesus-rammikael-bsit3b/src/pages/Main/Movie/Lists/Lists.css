@@ -1,3 +1,6 @@
+.body{
+  background-color: aqua;
+}
 .lists-container {
   width: 1200;
   display: flex;
@@ -11,6 +14,10 @@
   margin: 1rem 0;
   
 }
+body{
+  background-color: blue;
+}
+
 .create-container button{
   color: white;
 }

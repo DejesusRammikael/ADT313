@@ -8,7 +8,6 @@ const Lists = () => {
   const [lists, setLists] = useState([]);
 
   const getMovies = () => {
-    //get the movies from the api or database
     axios.get("/movies").then((response) => {
       setLists(response.data);
     });
@@ -29,16 +28,12 @@ const Lists = () => {
           },
         })
         .then(() => {
-          //update list by modifying the movie list array
           const tempLists = [...lists];
           const index = lists.findIndex((movie) => movie.id === id);
           if (index !== undefined || index !== -1) {
             tempLists.splice(index, 1);
             setLists(tempLists);
           }
-
-          //update list by requesting again to api
-          // getMovies();
         });
     }
   };
@@ -48,7 +43,6 @@ const Lists = () => {
       <div className="create-container">
         <button
           type="button"
-          class="btn btn-info"
           onClick={() => {
             navigate("/main/movie/form");
           }}
@@ -73,18 +67,13 @@ const Lists = () => {
                 <td>
                   <button
                     type="button"
-                    class="btn btn-secondary"
                     onClick={() => {
                       navigate("/main/movie/form/" + movie.id);
                     }}
                   >
                     Edit
                   </button>
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    onClick={() => handleDelete(movie.id)}
-                  >
+                  <button type="button" onClick={() => handleDelete(movie.id)}>
                     Delete
                   </button>
                 </td>

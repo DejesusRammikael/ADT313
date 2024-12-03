@@ -140,7 +140,6 @@ function Register() {
                 <input
                   type="text"
                   name="firstname"
-                  class="form-control my-2 py-2"
                   placeholder="Firstname"
                   onChange={(e) => handleOnChange(e, "firstname")}
                 />
@@ -154,7 +153,6 @@ function Register() {
                 <input
                   type="text"
                   name="middlename"
-                  class="form-control my-2 py-2"
                   placeholder="Middlename"
                   onChange={(e) => handleOnChange(e, "middlename")}
                 />
@@ -168,7 +166,6 @@ function Register() {
                 <input
                   type="text"
                   name="lastname"
-                  class="form-control my-2 py-2"
                   placeholder="Lastname"
                   onChange={(e) => handleOnChange(e, "lastname")}
                 />
@@ -182,7 +179,6 @@ function Register() {
                 <input
                   type="text"
                   name="phonenumber"
-                  class="form-control my-2 py-2"
                   placeholder="Phone Number"
                   onChange={(e) => handleOnChange(e, "phonenumber")}
                 />
