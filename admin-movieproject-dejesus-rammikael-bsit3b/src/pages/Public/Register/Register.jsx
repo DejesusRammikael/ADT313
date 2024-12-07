@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Register.css";
 import { useDebounce } from "../../../utils/hooks/useDebounce";
 import { useNavigate } from "react-router-dom";
-
+import logo from "./Logo.png";
 function Register() {
   const [email, createEmail] = useState("");
   const [password, createPassword] = useState("");
@@ -101,9 +101,12 @@ function Register() {
   return (
     <div className="Register">
       <div className="main-container">
-        <h3>Register</h3>
         <form>
           <div className="form-container">
+            <h3>Register</h3>
+            <div className="logo">
+              <img src={logo} alt="movielogo"></img>
+            </div>
             <div>
               <div className="form-group">
                 <input
@@ -195,6 +198,11 @@ function Register() {
               >
                 {status === "idle" ? "Register" : "Loading"}
               </button>
+              <div className="login-container">
+                <a href="/">
+                  <small>Login</small>
+                </a>
+              </div>
             </div>
           </div>
         </form>

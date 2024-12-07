@@ -2,7 +2,9 @@
   display: flex;
   overflow: hidden;
   max-height: 100vh;
-  background-color: blue;
+  background-image: url(bgform.jpg);
+  background-size:cover ;
+    background-position: center;
 }
 
 .Main .container {
@@ -16,7 +18,7 @@
 .Main .container .navigation {
   background-color: aliceblue;
   padding-top: 40px;
-  height: 100vh;
+  height: 150vh;
 }
 .Main .container .navigation ul {
   list-style: none;
@@ -39,4 +41,8 @@
 
 .Main .container .navigation ul li.logout {
   cursor: pointer;
+}
+
+.Main a{
+  font-size: 30px;
 }

@@ -1,25 +1,30 @@
-.body{
-  background-color: aqua;
-}
+
 .lists-container {
   width: 1200;
   display: flex;
   flex-direction: column;
-  max-height: 80vh; 
+  max-height: 80vh;
+  display: grid; 
   overflow-y: auto; 
 }
+
+
 
 .create-container {
   align-self: flex-end;
   margin: 1rem 0;
-  
-}
-body{
-  background-color: blue;
+
 }
 
+
+
 .create-container button{
-  color: white;
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+  font-size: 30px;
+
+  background-color: wheat;
 }
 .table-container {
   width: 100%;
@@ -30,21 +35,52 @@ body{
 .movie-lists {
   width: 100%;
   border-collapse: collapse;
+  box-shadow: 0 10px 10px rgb(19, 19, 41);
+  background-color: rgba(25, 26, 70);
+  
+  text-align: center;
+  overflow: hidden;
+  
 }
 
 .movie-lists th, 
 .movie-lists td {
   padding: 1rem;
-  border: 1px solid #ccc;
+  
+  font-size: 30px;
 }
 
+.movie-lists td{
+  color: wheat;
+  padding: 1rem 2rem;
+  
+
+}
+.movie-lists thead{
+  box-shadow: 0 10px 10px rgb(19, 19, 41);
+}
 .movie-lists th {
-  background-color: #f4f4f4;
+  background-color: wheat;
   position: sticky;
   top: 0; 
   z-index: 1;
 }
 
 .movie-lists td button{
+
   margin-right: 10px;
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  background-color: wheat;
+  font-weight: 300;
+  box-shadow: 100px;
+}
+
+.movie-lists tr:nth-child(even){
+  background-color: rgb(22, 26, 56);
+  box-shadow: 0 10px 10px rgb(19, 19, 41);
 }

@@ -4,6 +4,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 height: 100vh;
+
 }
 
 .Register{
@@ -12,3 +13,26 @@ height: 100vh;
   background-position: center;
 }
 
+.Register h3{
+  font-size: 50px;
+  margin-bottom: -30px;
+  position: static;
+  position: relative;
+  bottom: 150px;
+  color: rgb(167, 80, 37);
+}
+
+.show-password{
+  position: relative;
+  top: -15px;
+  
+}
+
+.login-container a{
+  color: orange;
+  text-decoration: none;
+  font-size: 35px;
+}
+.login-container a:active{
+  color: red;
+}
